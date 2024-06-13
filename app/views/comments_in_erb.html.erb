@@ -1,0 +1,17 @@
+<script>
+  // ok
+  const a = <%= eval 1 %>;
+
+  // not ok
+  const b = <%= eval 1 # hello %>;
+
+  // ok
+  <% if true %>;
+    const c = true;
+  <% end%>
+
+  // not ok
+  <% if true # hello %>;
+    const d = true;
+  <% end%>
+</script>
